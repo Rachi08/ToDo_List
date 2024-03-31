@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+
+}
+
+.toDo{
+    width: 100%;
+    background: #fff;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius:10px;
+
+}
+
+.toDo h2{
+    color: #002765;
+    display: flex;
+    align-items:center;
+    margin-bottom: 20px;
+    
+     
+}
+
+/* .toDo h2 img{
+    width: 30px;
+    margin-left: 10px;
+} */
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left:20px ;
+    margin-bottom:25px;
+}
+
+input{
+     font-weight: 15px;
+     border: none;
+     outline: none;
+     flex: 1;
+     padding: 10px;
+     background: transparent;
+}
+
+button{
+    border: none;
+     outline: none;
+     background: #ff5945;
+     color: #fff;
+     font-size: 16px;
+     padding: 10px 35px;
+     border-radius: 30px;
+     cursor: pointer;
+}
+
+ul li{
+  list-style: none;
+  font-size: 14px;
+  cursor: pointer;
+  /* padding: 12px, 8px ,12px, 50px; */
+  user-select:none ;
+  padding: 12px 8px 12px 50px;
+  position: relative;
+}
+
+ul li::before{
+    content: '';
+    height: 28px;
+    width: 28px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    /* background-position: center; */
+    /* border-radius: 50%; */
+    position: absolute;
+    top: 12px;
+    left: 8px;
+
+
+
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    font-size: 40px;
+    position: absolute;
+    right: 0;
+    top: 2px ;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #d51818;
+    border-radius: 50%;
+ 
+}
+
+ul li span:hover{
+    background: #0fadd9;
+}
